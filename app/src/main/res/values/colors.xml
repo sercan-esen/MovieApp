@@ -11,4 +11,9 @@
     <!-- App colors -->
     <color name="dark_color">#1F1D2B</color>
     <color name="text_color_black">#171725</color>
+    <color name="text_color_grey">#92929D</color>
+    <color name="cardview_border_color">#000000</color>
+    <color name="blue_accent">#12CDD9</color>
+    <color name="indicator_dots_color">#15606d</color>
+
 </resources>

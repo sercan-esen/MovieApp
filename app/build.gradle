@@ -20,6 +20,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildFeatures{
+        dataBinding true
         viewBinding true
     }
 
@@ -42,6 +43,7 @@ dependencies {
     def retrofit_version = "2.9.0"
     def okhttp3_version = "5.0.0-alpha.2"
     def coroutines_version = "1.6.4"
+    def lottie_version = "4.2.1"
 
 
     implementation 'androidx.core:core-ktx:1.7.0'
@@ -71,9 +73,10 @@ dependencies {
     implementation 'com.google.dagger:hilt-android:2.42'
     kapt 'com.google.dagger:hilt-compiler:2.42'
 
-
-
     implementation 'androidx.activity:activity-ktx:1.5.1'
+
+    //lottie
+    implementation "com.airbnb.android:lottie:$lottie_version"
 
     //Glide
     implementation 'com.github.bumptech.glide:glide:4.13.0'

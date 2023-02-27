@@ -10,8 +10,9 @@ import com.example.movieapp.databinding.FragmentViewPagerBinding
 import com.example.movieapp.presentation.onboarding.screens.FirstScreen
 import com.example.movieapp.presentation.onboarding.screens.SecondScreen
 import com.example.movieapp.presentation.onboarding.screens.ThirdScreen
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class ViewPagerFragment : Fragment() {
     private lateinit var binding: FragmentViewPagerBinding
     override fun onCreateView(

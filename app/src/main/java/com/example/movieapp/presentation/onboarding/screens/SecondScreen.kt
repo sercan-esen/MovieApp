@@ -8,8 +8,9 @@ import android.view.ViewGroup
 import androidx.viewpager2.widget.ViewPager2
 import com.example.movieapp.R
 import com.example.movieapp.databinding.FragmentSecondScreenBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class SecondScreen : Fragment() {
     private lateinit var binding: FragmentSecondScreenBinding
 

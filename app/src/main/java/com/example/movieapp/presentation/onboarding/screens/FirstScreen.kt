@@ -8,8 +8,9 @@ import android.view.ViewGroup
 import androidx.viewpager2.widget.ViewPager2
 import com.example.movieapp.R
 import com.example.movieapp.databinding.FragmentFirstScreenBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class FirstScreen : Fragment() {
     private lateinit var binding: FragmentFirstScreenBinding
     override fun onCreateView(

@@ -10,8 +10,9 @@ import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.example.movieapp.R
 import com.example.movieapp.databinding.FragmentThirdScreenBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class ThirdScreen : Fragment() {
     private lateinit var binding: FragmentThirdScreenBinding
 

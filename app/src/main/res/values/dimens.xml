@@ -47,7 +47,7 @@
     <dimen name="margin_66">66dp</dimen>
     <dimen name="margin_68">68dp</dimen>
     <dimen name="margin_70">70dp</dimen>
-    <dimen name="margin_144">144dp</dimen>
+    <dimen name="margin_140">140dp</dimen>
 
 
 
@@ -55,22 +55,27 @@
     <dimen name="radius_4">4dp</dimen>
     <dimen name="radius_8">8dp</dimen>
     <dimen name="radius_16">16dp</dimen>
+    <dimen name="radius_24">24dp</dimen>
     <dimen name="radius_32">32dp</dimen>
     <dimen name="radius_40">40dp</dimen>
     <dimen name="radius_60">60dp</dimen>
     <dimen name="radius_100">100dp</dimen>
 
     <!-- textsize -->
+    <dimen name="textsize_12sp">12sp</dimen>
     <dimen name="textsize_14sp">14sp</dimen>
     <dimen name="textsize_16sp">16sp</dimen>
     <dimen name="textsize_18sp">18sp</dimen>
+    <dimen name="textsize_24sp">24sp</dimen>
     <dimen name="textsize_28sp">28sp</dimen>
 
 
     <!-- lineheight -->
+    <dimen name="lineheight_14_6">14.6dp</dimen>
     <dimen name="lineheight_17">17dp</dimen>
     <dimen name="lineheight_19_5">19.5dp</dimen>
     <dimen name="lineheight_28_8">28.8dp</dimen>
+    <dimen name="lineheight_29_2">29.2dp</dimen>
     <dimen name="lineheight_34">34dp</dimen>
 
     <!-- other-dimens -->

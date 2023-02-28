@@ -23,16 +23,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:dotsColor="@color/indicator_dots_color"
-        app:dotsCornerRadius="8dp"
-        app:dotsSize="10dp"
-        app:dotsSpacing="4dp"
+        app:dotsCornerRadius="@dimen/radius_8"
+        app:dotsSize="@dimen/dotsize_10"
+        app:dotsSpacing="@dimen/dotsize_4"
         app:dotsWidthFactor="2.5"
         app:selectedDotColor="@color/blue_accent"
         app:progressMode="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginStart="56dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginStart="@dimen/margin_56"
+        android:layout_marginBottom="@dimen/margin_64"
         />
 
 

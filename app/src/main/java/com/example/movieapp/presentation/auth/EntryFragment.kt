@@ -9,14 +9,14 @@ import com.example.movieapp.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class BaseAuthFragment : Fragment() {
+class EntryFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_base_auth, container, false)
+        return inflater.inflate(R.layout.fragment_entry, container, false)
     }
 
 

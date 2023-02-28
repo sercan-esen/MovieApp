@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import androidx.viewpager2.widget.ViewPager2
 import com.example.movieapp.R
 import com.example.movieapp.databinding.FragmentThirdScreenBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -24,7 +23,7 @@ class ThirdScreen : Fragment() {
         binding = FragmentThirdScreenBinding.inflate(inflater, container, false)
 
         binding.ivOnBoardingScreenThirdBtn.setOnClickListener {
-            findNavController().navigate(R.id.action_viewPagerFragment_to_baseAuthFragment)
+            findNavController().navigate(R.id.action_viewPagerFragment_to_entryFragment)
             onBoardingFinished()
         }
         return binding.root

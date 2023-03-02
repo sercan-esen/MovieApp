@@ -88,14 +88,122 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autofillHints="name"
             android:fontFamily="@font/montserrat_medium"
             android:hint="@string/full_name"
             android:letterSpacing="0.1"
-            android:autofillHints="name"
-            android:textColor="@color/text_color_grey"
             android:lineHeight="@dimen/lineheight_14_6"
+            android:textColor="@color/text_color_grey"
             android:textSize="@dimen/textsize_12sp" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutEmailAddressSignUpScreen"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/margin_26"
+        android:layout_marginTop="@dimen/margin_28"
+        android:textColorHint="@color/white_grey"
+        app:boxCornerRadiusBottomEnd="@dimen/radius_24"
+        app:boxCornerRadiusBottomStart="@dimen/radius_24"
+        app:boxCornerRadiusTopEnd="@dimen/radius_24"
+        app:boxCornerRadiusTopStart="@dimen/radius_24"
+        app:boxStrokeColor="@color/text_input_layout_stroke"
+        app:boxStrokeWidth="@dimen/wh_1"
+        app:expandedHintEnabled="false"
+        app:hintTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayoutFullNameSignUpScreen">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="email"
+            android:autofillHints="emailAddress"
+            android:hint="@string/email_address"
+            android:textColor="@color/text_color_grey"
+            android:textSize="@dimen/textsize_12sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutPasswordSignUpScreen"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/margin_26"
+        android:layout_marginTop="@dimen/margin_28"
+        android:textColorHint="@color/white_grey"
+        app:boxCornerRadiusBottomEnd="@dimen/radius_24"
+        app:boxCornerRadiusBottomStart="@dimen/radius_24"
+        app:boxCornerRadiusTopEnd="@dimen/radius_24"
+        app:boxCornerRadiusTopStart="@dimen/radius_24"
+        app:boxStrokeColor="@color/text_input_layout_stroke"
+        app:boxStrokeWidth="@dimen/wh_1"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/text_color_grey"
+        app:expandedHintEnabled="false"
+        app:hintTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayoutEmailAddressSignUpScreen">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_medium"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:letterSpacing="0.1"
+            android:lineHeight="@dimen/lineheight_14_6"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_12sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/checkBoxSignUpScreen"
+        android:layout_width="@dimen/check_box_24"
+        android:layout_height="@dimen/check_box_24"
+        android:layout_marginTop="@dimen/margin_16"
+        app:layout_constraintStart_toStartOf="@id/textInputLayoutPasswordSignUpScreen"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayoutPasswordSignUpScreen" />
+
+    <TextView
+        android:id="@+id/tvTermsPrivacy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8"
+        android:fontFamily="@font/montserrat_medium"
+        android:letterSpacing="0.1"
+        android:lineHeight="@dimen/lineheight_19_2"
+        android:text="@string/i_agree_to_the_terms_and_services_and_privacy_policy"
+        android:textColor="@color/text_color_grey"
+        android:textSize="@dimen/textsize_12sp"
+        app:layout_constraintStart_toEndOf="@id/checkBoxSignUpScreen"
+        app:layout_constraintTop_toTopOf="@id/checkBoxSignUpScreen" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSignUpScreenSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_26"
+        android:layout_marginTop="@dimen/margin_36"
+        android:backgroundTint="@color/blue_accent"
+        android:fontFamily="@font/montserrat_medium"
+        android:letterSpacing="0.1"
+        android:lineHeight="@dimen/lineheight_19_5"
+        android:paddingVertical="@dimen/margin_16"
+        android:text="@string/sign_up"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_16sp"
+        app:cornerRadius="@dimen/radius_32"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTermsPrivacy" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

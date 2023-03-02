@@ -61,7 +61,7 @@
     <dimen name="radius_60">60dp</dimen>
     <dimen name="radius_100">100dp</dimen>
 
-    <!-- textsize -->
+    <!-- textSize -->
     <dimen name="textsize_12sp">12sp</dimen>
     <dimen name="textsize_14sp">14sp</dimen>
     <dimen name="textsize_16sp">16sp</dimen>
@@ -70,13 +70,17 @@
     <dimen name="textsize_28sp">28sp</dimen>
 
 
-    <!-- lineheight -->
+    <!-- lineHeight -->
     <dimen name="lineheight_14_6">14.6dp</dimen>
     <dimen name="lineheight_17">17dp</dimen>
+    <dimen name="lineheight_19_2">19.2dp</dimen>
     <dimen name="lineheight_19_5">19.5dp</dimen>
     <dimen name="lineheight_28_8">28.8dp</dimen>
     <dimen name="lineheight_29_2">29.2dp</dimen>
     <dimen name="lineheight_34">34dp</dimen>
+
+    <!-- checkBox Size -->
+    <dimen name="check_box_24">24dp</dimen>
 
 
 

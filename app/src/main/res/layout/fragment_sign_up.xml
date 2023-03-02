@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_color"
+    tools:context=".presentation.auth.SignUpFragment">
+
+    <ImageView
+        android:id="@+id/btnBackSignUpScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_26"
+        android:layout_marginTop="@dimen/margin_8"
+        android:src="@drawable/ic_btn_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSignUpScreenSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_14"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:letterSpacing="0.1"
+        android:lineHeight="@dimen/lineheight_19_5"
+        android:text="@string/sign_up"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvGetStartedSignUpScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_36"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:letterSpacing="0.1"
+        android:lineHeight="@dimen/lineheight_29_2"
+        android:text="@string/let_s_get_started"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSignUpScreenSignUp" />
+
+    <TextView
+        android:id="@+id/tvLatestMoviesSignUpScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:fontFamily="@font/montserrat_medium"
+        android:letterSpacing="0.1"
+        android:lineHeight="@dimen/lineheight_14_6"
+        android:text="@string/the_latest_movies_and_series_n_are_here"
+        android:textAlignment="center"
+        android:textColor="@color/white_grey"
+        android:textSize="@dimen/textsize_12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvGetStartedSignUpScreen" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutFullNameSignUpScreen"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/margin_26"
+        android:layout_marginTop="@dimen/margin_64"
+        android:textColorHint="@color/white_grey"
+        app:boxCornerRadiusBottomEnd="@dimen/radius_24"
+        app:boxCornerRadiusBottomStart="@dimen/radius_24"
+        app:boxCornerRadiusTopEnd="@dimen/radius_24"
+        app:boxCornerRadiusTopStart="@dimen/radius_24"
+        app:boxStrokeColor="@color/text_input_layout_stroke"
+        app:boxStrokeWidth="@dimen/wh_1"
+        app:expandedHintEnabled="false"
+        app:hintTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLatestMoviesSignUpScreen">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_medium"
+            android:hint="@string/full_name"
+            android:letterSpacing="0.1"
+            android:autofillHints="name"
+            android:textColor="@color/text_color_grey"
+            android:lineHeight="@dimen/lineheight_14_6"
+            android:textSize="@dimen/textsize_12sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -75,14 +75,12 @@
                 android:id="@+id/ivOnBoardingScreenSecondBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/wh_0"
-                android:layout_marginTop="@dimen/margin_40"
                 android:layout_marginEnd="@dimen/margin_32"
                 android:layout_marginBottom="@dimen/margin_32"
                 android:src="@drawable/ic_onboarding_screen_two_btn"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHeight_percent="0.2346"
-                app:layout_constraintTop_toBottomOf="@id/onboardingSecondScreenDescription" />
+                app:layout_constraintHeight_percent="0.2346" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 

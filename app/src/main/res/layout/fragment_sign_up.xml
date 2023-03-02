@@ -46,7 +46,7 @@
         android:textSize="@dimen/textsize_24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSignUpScreenSignUp" />
+        app:layout_constraintTop_toBottomOf="@+id/btnBackSignUpScreen" />
 
     <TextView
         android:id="@+id/tvLatestMoviesSignUpScreen"
@@ -92,9 +92,9 @@
             android:fontFamily="@font/montserrat_medium"
             android:hint="@string/full_name"
             android:letterSpacing="0.1"
-            android:lineHeight="@dimen/lineheight_14_6"
+            android:lineHeight="@dimen/lineheight_17"
             android:textColor="@color/text_color_grey"
-            android:textSize="@dimen/textsize_12sp" />
+            android:textSize="@dimen/textsize_14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -125,7 +125,9 @@
             android:autofillHints="emailAddress"
             android:hint="@string/email_address"
             android:textColor="@color/text_color_grey"
-            android:textSize="@dimen/textsize_12sp" />
+            android:textSize="@dimen/textsize_14sp"
+            android:letterSpacing="0.1"
+            android:lineHeight="@dimen/lineheight_17"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -158,9 +160,9 @@
             android:hint="@string/password"
             android:inputType="textPassword"
             android:letterSpacing="0.1"
-            android:lineHeight="@dimen/lineheight_14_6"
+            android:lineHeight="@dimen/lineheight_17"
             android:textColor="@color/white"
-            android:textSize="@dimen/textsize_12sp" />
+            android:textSize="@dimen/textsize_14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <CheckBox

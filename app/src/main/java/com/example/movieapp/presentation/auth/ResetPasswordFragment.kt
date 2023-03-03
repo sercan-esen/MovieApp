@@ -1,13 +1,12 @@
 package com.example.movieapp.presentation.auth
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.movieapp.R
 import com.example.movieapp.databinding.FragmentResetPasswordBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -52,11 +51,12 @@ class ResetPasswordFragment : Fragment() {
 
         auth.sendPasswordResetEmail(sPassword)
             .addOnCompleteListener {
-                if(it.isSuccessful){
-                    Toast.makeText(requireContext(),"Email Send",Toast.LENGTH_SHORT).show()
+                if (it.isSuccessful) {
+                    Toast.makeText(requireContext(), "Email Send", Toast.LENGTH_SHORT).show()
 
-                }else{
-                    Toast.makeText(requireContext(),it.exception.toString(),Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(requireContext(), it.exception.toString(), Toast.LENGTH_SHORT)
+                        .show()
                 }
             }
     }

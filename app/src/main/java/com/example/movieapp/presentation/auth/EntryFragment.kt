@@ -1,10 +1,10 @@
 package com.example.movieapp.presentation.auth
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.movieapp.R
 import com.example.movieapp.databinding.FragmentEntryBinding
@@ -36,10 +36,11 @@ class EntryFragment : Fragment() {
         }
     }
 
-    private fun navToSignUpFragment(){
-       findNavController().navigate(R.id.action_entryFragment_to_signUpFragment)
+    private fun navToSignUpFragment() {
+        findNavController().navigate(R.id.action_entryFragment_to_signUpFragment)
     }
-    private fun navToLoginFragment(){
+
+    private fun navToLoginFragment() {
         findNavController().navigate(R.id.action_entryFragment_to_loginFragment)
     }
 

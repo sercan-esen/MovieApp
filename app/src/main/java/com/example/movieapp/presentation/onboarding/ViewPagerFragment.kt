@@ -1,11 +1,10 @@
 package com.example.movieapp.presentation.onboarding
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.movieapp.R
+import androidx.fragment.app.Fragment
 import com.example.movieapp.databinding.FragmentViewPagerBinding
 import com.example.movieapp.presentation.onboarding.screens.FirstScreen
 import com.example.movieapp.presentation.onboarding.screens.SecondScreen

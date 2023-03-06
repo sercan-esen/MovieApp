@@ -6,9 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.movieapp.R
 import com.example.movieapp.databinding.FragmentLoginBinding
+import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -19,10 +21,12 @@ class LoginFragment : Fragment() {
     private lateinit var binding: FragmentLoginBinding
     private lateinit var auth: FirebaseAuth
 
+    private val viewModel: AuthViewModel by viewModels()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         binding = FragmentLoginBinding.inflate(layoutInflater)
         return binding.root
@@ -54,17 +58,15 @@ class LoginFragment : Fragment() {
     }
 
     private fun signInEmailAndPassword() {
-        auth = Firebase.auth
         val email = binding.etEmailAddressLoginScreen.text.toString().trim()
         val password = binding.etPasswordLoginScreen.text.toString().trim()
 
-        auth.signInWithEmailAndPassword(email, password)
-            .addOnSuccessListener {
-                Toast.makeText(requireContext(), "Login Successful", Toast.LENGTH_SHORT).show()
-                findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
-            }.addOnFailureListener {
-                Toast.makeText(requireContext(), it.localizedMessage, Toast.LENGTH_SHORT).show()
-            }
+        viewModel.signIn(email = email, password = password, onSuccess = ::navigateToHomeFragment, onFailure = {
+            Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
+        })
+    }
 
+    private fun navigateToHomeFragment() {
+        findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
     }
 }

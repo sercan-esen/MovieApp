@@ -1,13 +1,18 @@
 package com.example.movieapp.presentation.auth
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import com.example.movieapp.MainActivity
+import com.example.movieapp.R
 import com.example.movieapp.databinding.FragmentResetPasswordBinding
+import com.example.movieapp.presentation.util.extension.showToastMessage
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -16,7 +21,8 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class ResetPasswordFragment : Fragment() {
     private lateinit var binding: FragmentResetPasswordBinding
-    private lateinit var auth: FirebaseAuth
+
+    private val viewModel: AuthViewModel by viewModels()
 
 
     override fun onCreateView(
@@ -26,6 +32,7 @@ class ResetPasswordFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentResetPasswordBinding.inflate(layoutInflater)
         return binding.root
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -46,18 +53,16 @@ class ResetPasswordFragment : Fragment() {
     }
 
     private fun passwordResetEmail() {
-        auth = Firebase.auth
-        val sPassword = binding.etResetPasswordResetScreen.text.toString().trim()
 
-        auth.sendPasswordResetEmail(sPassword)
-            .addOnCompleteListener {
-                if (it.isSuccessful) {
-                    Toast.makeText(requireContext(), "Email Send", Toast.LENGTH_SHORT).show()
+        val email = binding.etEmailResetScreen.text.toString().trim()
 
-                } else {
-                    Toast.makeText(requireContext(), it.exception.toString(), Toast.LENGTH_SHORT)
-                        .show()
-                }
-            }
+        viewModel.resetPassword(
+            email = email,
+            onSuccess = {
+                requireContext().showToastMessage(resources.getString(R.string.txt_email_send))
+            },
+            onFailure = {
+                requireContext().showToastMessage(it)
+            })
     }
 }

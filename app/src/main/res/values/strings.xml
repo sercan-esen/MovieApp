@@ -3,27 +3,40 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <!-- OnBoarding -->
+    <string name="the_biggest_international_and_local_film_streaming">The biggest international and local film streaming</string>
+    <string name="semper_in_cursus_magna_et_eu_varius_nunc_adipiscing_elementum_justo_laoreet_id_sem_semper_parturient">Semper in cursus magna et eu varius nunc adipiscing. Elementum justo, laoreet id sem semper parturient.</string>
+    <string name="offers_ad_free_viewing_of_high_quality">Offers ad-free viewing of high quality</string>
+    <string name="our_service_brings_together_your_favorite_series">Our service brings together your favorite series</string>
 
+    <!-- EntryFragment -->
     <string name="cinemax">CINEMAX</string>
     <string name="enter_your_registered_phone_number_to_sign_up">Enter your registered \n Phone Number to Sign Up</string>
     <string name="sign_up">Sign Up</string>
     <string name="i_already_have_an_account">I already have an account?</string>
     <string name="login">Login</string>
-    <string name="the_biggest_international_and_local_film_streaming">The biggest international and local film streaming</string>
-    <string name="semper_in_cursus_magna_et_eu_varius_nunc_adipiscing_elementum_justo_laoreet_id_sem_semper_parturient">Semper in cursus magna et eu varius nunc adipiscing. Elementum justo, laoreet id sem semper parturient.</string>
-    <string name="offers_ad_free_viewing_of_high_quality">Offers ad-free viewing of high quality</string>
-    <string name="our_service_brings_together_your_favorite_series">Our service brings together your favorite series</string>
     <string name="or_sign_up_with">Or Sign up with</string>
+
+    <!-- LoginFragment -->
     <string name="hi">Hi</string>
     <string name="welcome_back_please_enter_your_details">Welcome back! Please enter \n your details.</string>
     <string name="email_address">Email Address</string>
     <string name="password">Password</string>
     <string name="forgot_password">Forgot Password?</string>
+
+    <!-- SignUpFragment -->
     <string name="let_s_get_started">Let\'s get started</string>
-    <string name="full_name">Full Name</string>
     <string name="the_latest_movies_and_series_n_are_here">The latest movies and series \n are here</string>
+    <string name="full_name">Full Name</string>
     <string name="i_agree_to_the_terms_and_services_and_privacy_policy">I agree to the Terms and Services\nand Privacy Policy</string>
+    <string name="txt_confirm_privacy">You need confirm Privacy</string>
+    <string name="txt_account_created">Account created</string>
+
+    <!-- ResetPasswordFragment -->
+    <string name="txt_email_send">Email send</string>
+    <string name="next">Next</string>
     <string name="reset_password">Reset Password</string>
     <string name="recover_your_account_password">Recover your account password</string>
-    <string name="next">Next</string>
+
+
 </resources>

@@ -59,7 +59,7 @@ class EntryFragment : Fragment() {
         findNavController().navigate(R.id.action_entryFragment_to_loginFragment)
     }
 
-    private fun signInWithGoogle(){
+    private fun signInWithGoogle() {
         viewModel.signInGoogle(
             requireActivity(),
             oneTapClient,

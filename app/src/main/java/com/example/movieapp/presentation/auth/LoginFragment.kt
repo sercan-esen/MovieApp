@@ -4,22 +4,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.movieapp.R
 import com.example.movieapp.databinding.FragmentLoginBinding
-import com.google.firebase.auth.AuthResult
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
+import com.example.movieapp.presentation.util.extension.showToastMessage
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class LoginFragment : Fragment() {
     private lateinit var binding: FragmentLoginBinding
-    private lateinit var auth: FirebaseAuth
 
     private val viewModel: AuthViewModel by viewModels()
 
@@ -62,11 +57,12 @@ class LoginFragment : Fragment() {
         val password = binding.etPasswordLoginScreen.text.toString().trim()
 
         viewModel.signIn(email = email, password = password, onSuccess = ::navigateToHomeFragment, onFailure = {
-            Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
+            requireContext().showToastMessage(it)
         })
     }
 
     private fun navigateToHomeFragment() {
         findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
     }
+
 }

@@ -4,20 +4,19 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.movieapp.R
 import com.example.movieapp.databinding.FragmentSignUpBinding
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
+import com.example.movieapp.presentation.util.extension.showToastMessage
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class SignUpFragment : Fragment() {
     private lateinit var binding: FragmentSignUpBinding
-    private lateinit var auth: FirebaseAuth
+
+    private val viewModel: AuthViewModel by viewModels()
 
 
     override fun onCreateView(
@@ -48,24 +47,28 @@ class SignUpFragment : Fragment() {
     }
 
     private fun createUserWithEmailAndPassword() {
-        auth = Firebase.auth
         val email = binding.etEmailAddressSignUpScreen.text.toString().trim()
         val password = binding.etPasswordSignUpScreen.text.toString().trim()
 
         val privacyAccepted = binding.checkBoxSignUpScreen.isChecked
         if (privacyAccepted) {
-            auth.createUserWithEmailAndPassword(email, password)
-                .addOnSuccessListener {
-                    Toast.makeText(requireContext(), "Account created", Toast.LENGTH_SHORT).show()
-                    findNavController().navigate(R.id.action_signUpFragment_to_homeFragment)
-                }.addOnFailureListener {
-                    Toast.makeText(requireContext(), it.localizedMessage, Toast.LENGTH_SHORT).show()
-                }
+            viewModel.signUp(
+                email = email,
+                password = password,
+                onSuccess = ::navigateToHome,
+                onFailure = {
+                    requireContext().showToastMessage(it)
+                })
         } else {
-            Toast.makeText(requireContext(), "You need confirm Privacy", Toast.LENGTH_SHORT).show()
+            requireContext().showToastMessage(resources.getString(R.string.txt_confirm_privacy))
         }
 
 
+    }
+
+    private fun navigateToHome() {
+        requireContext().showToastMessage(resources.getString(R.string.txt_account_created))
+        findNavController().navigate(R.id.action_signUpFragment_to_homeFragment)
     }
 
 

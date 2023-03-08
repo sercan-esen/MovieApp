@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/dark_color">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCategoriesRV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/dark_color"
+        android:fontFamily="@font/montserrat_medium"
+        android:lineHeight="@dimen/lineheight_14_6"
+        android:letterSpacing="0.1"
+        android:insetLeft="@dimen/wh_0"
+        android:insetTop="@dimen/wh_0"
+        android:insetRight="@dimen/wh_0"
+        android:insetBottom="@dimen/wh_0"
+        android:textColor="@color/white_grey"
+        android:text="All"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="12sp"
+        app:cornerRadius="@dimen/radius_8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

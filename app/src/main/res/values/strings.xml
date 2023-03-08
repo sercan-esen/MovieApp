@@ -38,5 +38,9 @@
     <string name="reset_password">Reset Password</string>
     <string name="recover_your_account_password">Recover your account password</string>
 
+    <!-- HomeFragment -->
+    <string name="hello">Hello</string>
+    <string name="let_s_stream_your_favorite_movie">Let’s stream your favorite movie</string>
+
 
 </resources>

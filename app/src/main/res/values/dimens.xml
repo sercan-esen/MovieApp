@@ -5,6 +5,7 @@
     <dimen name="wh_0">0dp</dimen>
     <dimen name="wh_1">1dp</dimen>
     <dimen name="wh_2">2dp</dimen>
+    <dimen name="wh_44">44dp</dimen>
     <dimen name="wh_68">68dp</dimen>
     <dimen name="wh_70">70dp</dimen>
 

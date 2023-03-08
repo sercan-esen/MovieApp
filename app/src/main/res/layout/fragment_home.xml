@@ -1,23 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dark_color"
-    tools:context=".presentation.home.HomeFragment">
+    android:background="@color/dark_color">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/tvHome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome to home"
-        android:textSize="40sp"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dark_color"
+        tools:context=".presentation.home.HomeFragment">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivProfile"
+            android:layout_width="@dimen/wh_44"
+            android:layout_height="@dimen/wh_44"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_8"
+            android:src="@drawable/ic_home_profile_place_holder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
+
+        <TextView
+            android:id="@+id/tvHelloHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:letterSpacing="0.1"
+            android:lineHeight="@dimen/lineheight_19_5"
+            android:text="@string/hello"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_16sp"
+            app:layout_constraintStart_toEndOf="@id/ivProfile"
+            app:layout_constraintTop_toTopOf="@id/ivProfile" />
+
+        <TextView
+            android:id="@+id/tvLetsStream"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_4"
+            android:fontFamily="@font/montserrat_medium"
+            android:lineHeight="@dimen/lineheight_14_6"
+            android:text="@string/let_s_stream_your_favorite_movie"
+            android:textColor="@color/text_color_grey"
+            android:textSize="@dimen/textsize_12sp"
+            app:layout_constraintStart_toStartOf="@id/tvHelloHome"
+            app:layout_constraintTop_toBottomOf="@id/tvHelloHome" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivWishListHome"
+            android:layout_width="@dimen/wh_44"
+            android:layout_height="@dimen/wh_44"
+            android:layout_marginTop="@dimen/margin_12"
+            android:layout_marginEnd="@dimen/margin_24"
+            android:src="@drawable/ic_wishlist_home"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etSearchBarHome"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_32"
+            android:textColorHint="@color/white"
+            app:boxCornerRadiusBottomEnd="@dimen/margin_24"
+            app:boxCornerRadiusBottomStart="@dimen/margin_24"
+            app:boxCornerRadiusTopEnd="@dimen/margin_24"
+            app:boxCornerRadiusTopStart="@dimen/margin_24"
+            app:boxStrokeColor="@color/text_input_layout_stroke"
+            app:boxStrokeWidth="1dp"
+            app:hintTextColor="@color/text_color_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivProfile"
+            app:startIconDrawable="@drawable/ic_search"
+            app:startIconTint="@color/text_color_grey">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textViewSearchTextHomeScreen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/soft"
+                android:backgroundTintMode="add"
+                android:hint="Search"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:textColor="@color/text_color_grey" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rVCategories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="222dp"
+            android:layout_marginStart="@dimen/margin_24"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etSearchBarHome"
+            tools:listitem="@layout/home_categories_row"
+
+
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
+

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardViewMostPopular"
+    android:layout_width="@dimen/wh_135"
+    android:layout_height="@dimen/wh_231"
+    android:layout_marginHorizontal="@dimen/margin_8"
+    android:backgroundTint="@color/soft"
+    app:cardCornerRadius="@dimen/margin_12"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivMostPopular"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/wh_178"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvRatingMostPopular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:background="@drawable/bg_rating_textview"
+            android:drawablePadding="@dimen/margin_8"
+            android:drawableTint="@color/orange"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:letterSpacing="0.1"
+            android:lineHeight="@dimen/lineheight_14_6"
+            android:paddingHorizontal="@dimen/margin_8"
+            android:paddingVertical="@dimen/margin_4"
+            android:text="@string/_4_5"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/textsize_12sp"
+            app:drawableStartCompat="@drawable/ic_star"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTitleMovie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_10"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:letterSpacing="0.1"
+            android:lineHeight="@dimen/lineheight_17"
+            android:maxLines="1"
+            android:text="@string/movie_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivMostPopular" />
+
+        <TextView
+            android:id="@+id/tvCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_4"
+            android:fontFamily="@font/montserrat_medium"
+            android:letterSpacing="0.1"
+            android:lineHeight="@dimen/lineheight_12_2"
+            android:text="@string/category"
+            android:textColor="@color/text_color_grey"
+            android:textSize="@dimen/textsize_10sp"
+            app:layout_constraintStart_toStartOf="@id/tvTitleMovie"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleMovie" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
+
+

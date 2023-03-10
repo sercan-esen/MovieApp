@@ -41,6 +41,12 @@
     <!-- HomeFragment -->
     <string name="hello">Hello</string>
     <string name="let_s_stream_your_favorite_movie">Let’s stream your favorite movie</string>
+    <string name="categories">Categories</string>
+    <string name="most_popular">Most popular</string>
+    <string name="see_all">See All</string>
+    <string name="_4_5">4.5</string>
+    <string name="movie_title">Movie Title</string>
+    <string name="category">Category</string>
 
 
 </resources>

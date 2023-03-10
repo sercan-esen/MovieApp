@@ -17,5 +17,6 @@
     <color name="blue_accent">#12CDD9</color>
     <color name="indicator_dots_color">#15606d</color>
     <color name="white_grey">#EBEBEF</color>
+    <color name="orange">#FF8700</color>
 
 </resources>
